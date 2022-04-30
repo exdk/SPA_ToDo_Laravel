@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^yunusov\.me\todo\$ [NC]
+RewriteCond %{REQUEST_URI} !^project/public/posts/ [NC]
+RewriteRule ^(.*)$ project/public/posts/$1 [L]
+</IfModule>
